@@ -46,6 +46,7 @@ angular_dist_score(az_true, zen_true, az_pred, zen_pred)3.3472593432077193, 0.75
 </div>
 
 **[more] in log shows the pattern**
+https://github.com/tyeestudio/language-structure-in-iceCube-Neutrino-data-/blob/main/training.and.prediction.log.txt
 
 # appendix
 
