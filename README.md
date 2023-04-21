@@ -2,7 +2,7 @@
 ![galaxy more avatar 2](https://user-images.githubusercontent.com/131216170/233606301-2af476b4-842d-469d-b849-4245eadd6ac4.png)
 
 notebook link:
-https://www.kaggle.com/code/tyeestudio/language-structure-in-icecube-neutrino-data
+https://www.kaggle.com/code/tyeestudio/language-from-outer-space-in-icecube-data
 
 # abstract [what]
 gpt is mainly for language model, to prediction next word(s) in sequence. however, this notebook shows the [datasets] from the iceCube Neutrino Observatory may contain language-like [structures], after using gpt to predict neutrino particle’s direction.
