@@ -1,16 +1,24 @@
-# [first draft]
+# 
+is it possible the dataset is the proof of [language] from outer space
+# 
+
 ![galaxy more avatar 2](https://user-images.githubusercontent.com/131216170/233606301-2af476b4-842d-469d-b849-4245eadd6ac4.png)
 
 notebook link:
 https://www.kaggle.com/code/tyeestudio/language-from-outer-space-in-icecube-data
 
 # abstract [what]
-gpt is mainly for language model, to prediction next word(s) in sequence. however, this notebook shows the [datasets] from the iceCube Neutrino Observatory may contain language-like [structures], after using gpt to predict neutrino particle’s direction.
+gpt is mainly for language model, to prediction next word(s) in sequence. however, this notebook (and other very early open notebooks, see [appendix] ) shows the [datasets] from the iceCube Neutrino Observatory may contain <b>language-like [structures]</b>, after using gpt to predict neutrino particle’s direction.
 
 # introduction [why]
-<li>because of consistency of how <font color='orange'><b>prediction pattern</b></font> of reaching to <font color='orange'><b>[0]</b></font> angular-dist-score from multiple different datasets (see train-test-split).  </li>
+the <b>primage use cases</b> for gpt based model is known for [languege] related dataset. for instance, text and images, these are language related, and the <b>[known true]</b> is, there are some <b>[logics] or [intelligent]</b> inside of human text, human created images. however, in this notebook (and other very early open notebooks, see [appendix] ), shows that <b>non-language-related</b> dataset from iceCube Neutrino Observatory, can be predicted in next sequence just like the [lauguage] can be predicted from gpt based model for the [next word], and because of:
+
+<li>consistency of how <font color='orange'><b>prediction pattern</b></font> of reaching to <font color='orange'><b>[0.0]</b></font> angular-dist-score from multiple different datasets (see train-test-split).  </li>
 <li>the nature of gpt is unsupervised learning. </li>
-<li>total of 688898 characters, size of <b>unique</b> chars is <font color='orange'><b>12</b></font>, actual unique chars are <font color='orange'><b>[' ', '.', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'] </b></font></li>
+<li>total of 688898 characters, size of <b>unique</b> chars <font color='orange'><b>12</b></font>, actual unique chars <font color='orange'><b>[' ', '.', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'] </b></font></li>
+<li>small number of iterations, the model shows strong prediction ability, which also means, less weights needed, and most importanly, it means some more strong NON-weight related <b>[logics] or [intelligent] in the struture, similar to language</b>.</li>
+</br>
+<b>leads to reverse prediction</b> of a dataset may have [language] struture inside.
     
 # methods [how]
 
@@ -24,8 +32,13 @@ gpt is mainly for language model, to prediction next word(s) in sequence. howeve
 <li> feed input context into model trainer</li>
 <li> monitoring loss and prediction result (angular_dist_score) from callback during the trainer run </li>
 
-# results
+<li> run 6300[production] iters </li>
+<li> batch files from [ 1, 60, 111, 240, 222, 389, 433, 555, 618 ] </li>
+<li> 9000[production]  rows of data </li>
+<li> test data from train-test split </li>
 
+# results
+from this notebook, show the prediction can start to predict neutrino particle’s direction after 1350 iterations, and become consistant after 1700 iterations.
 <div>
 iter_dt 71.12ms; <font color='orange'><b>iter 1350</b></font>: train loss 0.56368
 input_context  778000508 0.388702 0 , reversed  0.9249987306885454
@@ -45,8 +58,7 @@ angular_dist_score(az_true, zen_true, az_pred, zen_pred)3.3472593432077193, 0.75
 <font color='orange'><b>progress_rec </b></font>{'iter_id': 1350, 'target_event_id': 778000508, 'target_azimuth': 0.482462, 'target_zenith': 0.286377, 'reverse target_azimuth': 3.3472593432077193, 'reverse target_zenith': 0.7540110701466416, 'predict_azimuth': '0.482462', 'predict_zenith': '0.286377', 'reverse_predict_charge': 0.9249987306885454, 'reverse_predict_azimuth': 3.3472593432077193, 'reverse_predict_zenith': 0.7540110701466416, <font color='orange'><b>'score': 0.0</b></font>}
 </div>
 
-**[more] in log shows the pattern**
-https://github.com/tyeestudio/language-structure-in-iceCube-Neutrino-data-/blob/main/training.and.prediction.log.txt
+**[more] in log shows the <font color='orange'><b>prediction patterns</b></font>**
 
 # appendix
 
@@ -54,4 +66,11 @@ https://github.com/tyeestudio/language-structure-in-iceCube-Neutrino-data-/blob/
 * minGPT https://github.com/karpathy/minGPT
 * first published notebook for showing the result https://www.kaggle.com/code/tyeestudio/gpt-based-prediction-no-chatgpt
 * then, watch it learn in this notebook https://www.kaggle.com/code/tyeestudio/gpt-based-prediction-watch-it-learn  
-* show with graph https://www.kaggle.com/code/tyeestudio/gpt-based-prediction-live-loss-plot    
+* show with liveplot https://www.kaggle.com/code/tyeestudio/gpt-based-prediction-live-loss-plot    
+
+
+# note
+<li>this is an copy from my private notebook which has 77 versions.</li>
+<li>because of each prediction takes about 0.3 seconds, this notebook timeout the submission</li>
+
+
